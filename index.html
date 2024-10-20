@@ -6,7 +6,6 @@
     <title>EasyBet</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
@@ -67,57 +66,7 @@
         </section>
     </main>
 
-    <!-- Script para manejar el envío del formulario -->
-    <script>
-        // Este script puede ser eliminado si decides usar solo la funcionalidad de Netlify
-        document.getElementById('myForm').addEventListener('submit', function(event) {
-            // Puedes eliminar esta parte si Netlify maneja el envío automáticamente
-            event.preventDefault(); // Evita el envío tradicional
-
-            const nombre = document.getElementById('nombre').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const telefono = document.getElementById('telefono').value.trim();
-
-            if (!nombre || !email || !telefono) {
-                alert('Por favor, completa todos los campos.');
-                return;
-            }
-
-            // Enviar datos al servidor (opcional)
-            fetch('/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ nombre, email, telefono })
-            })
-            .then(response => {
-                if (response.ok) {
-                    mostrarConfirmacion(); // Muestra la página de confirmación
-                } else {
-                    throw new Error('Error al guardar los datos');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Hubo un error al guardar los datos.');
-            });
-        });
-
-        // Funciones para mostrar y ocultar secciones
-        function mostrarPagina2() {
-            document.getElementById('page1').style.display = 'none';
-            document.getElementById('page2').style.display = 'block';
-        }
-
-        function mostrarConfirmacion() {
-            document.getElementById('page2').style.display = 'none';
-            document.getElementById('confirmacion').style.display = 'block';
-        }
-
-        function mostrarPagina1() {
-            document.getElementById('confirmacion').style.display = 'none';
-            document.getElementById('page1').style.display = 'block';
-        }
-    </script>
+    <!-- Aquí puedes agregar más scripts si es necesario -->
 
 </body>
 </html>
