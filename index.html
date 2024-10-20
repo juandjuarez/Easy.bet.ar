@@ -34,7 +34,8 @@
             <div class="background-image" style="background-image: url('img/2.png');"></div>
 
             <!-- Formulario de suscripción -->
-            <form id="myForm" class="form-container" data-netlify="true">
+            <form id="myForm" class="form-container" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="myForm"> <!-- Campo oculto para el nombre del formulario -->
                 <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
                 <input type="email" id="email" name="email" placeholder="E-mail" required>
                 <input type="tel" id="telefono" name="telefono" placeholder="Contacto +54" required>
@@ -68,7 +69,9 @@
 
     <!-- Script para manejar el envío del formulario -->
     <script>
+        // Este script puede ser eliminado si decides usar solo la funcionalidad de Netlify
         document.getElementById('myForm').addEventListener('submit', function(event) {
+            // Puedes eliminar esta parte si Netlify maneja el envío automáticamente
             event.preventDefault(); // Evita el envío tradicional
 
             const nombre = document.getElementById('nombre').value.trim();
@@ -80,7 +83,7 @@
                 return;
             }
 
-            // Enviar datos al servidor
+            // Enviar datos al servidor (opcional)
             fetch('/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
