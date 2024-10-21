@@ -31,11 +31,11 @@
             <div class="background-image" style="background-image: url('img/2.png');"></div>
 
             <!-- Formulario de suscripción -->
-            <form id="myForm" class="form-container" data-netlify="true">
+            <form id="myForm" class="form-container" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="myForm"> <!-- Campo oculto para el nombre del formulario -->
                 <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
                 <input type="email" id="email" name="email" placeholder="E-mail" required>
                 <input type="tel" id="telefono" name="telefono" placeholder="Contacto +54" required>
-                <input type="hidden" name="redirect" value="/gracias"> <!-- Redirección después de envío exitoso -->
                 <button type="submit" class='button-mayor'>Suscribirme</button>
             </form>
 
@@ -50,7 +50,7 @@
             </div>
 
             <!-- Nueva imagen añadida -->
-            <img src='img/recurso2.png' alt='Recurso Adicional' class='recurso-image'> <!-- Imagen adicional -->
+            <img src='img/Recurso2.png' alt='Recurso Adicional' class='recurso-image'> <!-- Imagen adicional -->
 
         </section>
 
@@ -59,7 +59,7 @@
             <div class='success-message'>
                 <h1>¡Registro Exitoso!</h1>
                 <p>Gracias por registrarte en EasyBet. Te contactaremos pronto.</p>
-                <a href="javascript:void(0);" onclick="mostrarPagina1()" class="button-mayor">Volver al inicio</a>
+                <a href='#' onclick='mostrarPagina1()' class='button-mayor'>Volver al inicio</a>
             </div>
         </section>
 
@@ -68,40 +68,8 @@
         </section>
     </main>
 
-    <!-- Script para manejar el envío del formulario -->
+    <!-- Script para mostrar y ocultar secciones -->
     <script>
-        document.getElementById('myForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita el envío tradicional
-
-            const nombre = document.getElementById('nombre').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const telefono = document.getElementById('telefono').value.trim();
-
-            if (!nombre || !email || !telefono) {
-                alert('Por favor, completa todos los campos.');
-                return;
-            }
-
-            // Enviar datos al servidor
-            fetch('/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ nombre, email, telefono })
-            })
-            .then(response => {
-                if (response.ok) {
-                    mostrarConfirmacion(); // Muestra la página de confirmación
-                } else {
-                    throw new Error('Error al guardar los datos');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Hubo un error al guardar los datos.');
-            });
-        });
-
-        // Funciones para mostrar y ocultar secciones
         function mostrarPagina2() {
             document.getElementById('page1').style.display = 'none';
             document.getElementById('page2').style.display = 'block';
