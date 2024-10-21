@@ -1,6 +1,8 @@
 // Función Netlify para manejar el formulario
 exports.handler = async function(event, context) {
   
+  console.log("Solicitud recibida: ", event.httpMethod);  // Registrar el método de la solicitud
+
   // Manejo de la solicitud preflight para CORS
   if (event.httpMethod === 'OPTIONS') {
     return {
