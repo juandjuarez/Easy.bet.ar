@@ -9,6 +9,7 @@ module.exports = {
   mode: 'production',
   resolve: {
     fallback: {
+      path: false,  // Desactiva la necesidad del módulo path
       zlib: require.resolve('browserify-zlib'),
       crypto: require.resolve('crypto-browserify'),
       querystring: require.resolve('querystring-es3'),
@@ -19,8 +20,8 @@ module.exports = {
       util: require.resolve('util/'),
       http: require.resolve('stream-http'),
       https: require.resolve('stream-http'),
-      fs: false, // false si no necesitas fs
-      net: false, // false si no necesitas net
+      fs: false, // No se necesita polyfill para 'fs'
+      net: false, // No se necesita polyfill para 'net'
     },
   },
 };

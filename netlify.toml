@@ -1,12 +1,12 @@
-# Configuración básica de Netlify Forms
 [build]
-  publish = "dist"
+  publish = "dist"  # Cambia "dist" si tu carpeta de salida es diferente
   command = "npm run build"
 
-# Configuración de los formularios
 [build.environment]
   NETLIFY_FORMS = "true"
 
-# Configuración de funciones
+[[plugins]]
+  package = "@netlify/plugin-functions-core"  # Asegúrate de que el nombre sea correcto
+
 [functions]
-  node_bundler = "esbuild"
+  node_bundler = "esbuild"  # O el empaquetador que estés usando
