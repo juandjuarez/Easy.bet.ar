@@ -6,7 +6,7 @@
   NETLIFY_FORMS = "true"
 
 [[plugins]]
-  package = "@netlify/plugin-functions-core"  # Asegúrate de que el nombre sea correcto
+  package = "@netlify/functions"  # Asegúrate de que el nombre sea correcto
 
 [functions]
   node_bundler = "esbuild"  # O el empaquetador que estés usando
