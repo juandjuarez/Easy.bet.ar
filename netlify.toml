@@ -1,8 +1,7 @@
-
 # Configuración de la función edge
-[[edge_functions]]
-function = "http"
-path = "/test"
+[edge_functions]
+  function = "http"
+  path = "/test"
 
 # Configuración básica de Netlify Forms
 [build]
@@ -23,6 +22,6 @@ path = "/test"
 [[plugins]]
   package = "@netlify/plugin-functions"
 
-# Opcional: Si tu sitio necesita manejar funciones edge adicionales, las defines aquí
-[[functions]]
+# Configuración de funciones
+[functions]
   node_bundler = "esbuild" # Define el empaquetador que usas para tus funciones
