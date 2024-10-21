@@ -4,12 +4,6 @@
   publish = "dist" # Cambia "dist" por el directorio donde Netlify debe buscar tus archivos
   command = "npm run build" # El comando que usas para construir el proyecto
 
-# Opcional: Redirección después del envío del formulario
-[[redirects]]
-  from = "/gracias"
-  to = "/gracias.html"
-  status = 200
-
 # Configuración de los formularios
 [build.environment]
   NETLIFY_FORMS = "true"
