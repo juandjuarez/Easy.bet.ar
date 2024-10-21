@@ -1,7 +1,3 @@
-# Configuración de la función edge
-[edge_functions]
-  function = "http"
-  path = "/test"
 
 # Configuración básica de Netlify Forms
 [build]
