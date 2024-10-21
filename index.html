@@ -38,13 +38,13 @@
             <div class="background-image" style="background-image: url('img/2.png');"></div>
 
             <!-- Formulario de suscripción -->
-            <form id="myForm" class="form-container" method="POST" data-netlify="true">
+            <form id="myForm" class="form-container" method="POST" action="/.netlify/functions/registro" data-netlify="true">
                 <input type="hidden" name="form-name" value="myForm"> <!-- Campo oculto para el nombre del formulario -->
                 <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
                 <input type="email" id="email" name="email" placeholder="E-mail" required>
                 <input type="tel" id="telefono" name="telefono" placeholder="Contacto +54" required>
                 <input type="hidden" name="redirect" value="/gracias"> <!-- Redirección después de envío exitoso -->
-                <button type="submit" class='button-mayor'>Suscribirme</button>
+                <button type="submit" class="button-mayor">Suscribirme</button>
             </form>
 
             <!-- Contenedor de imágenes -->
