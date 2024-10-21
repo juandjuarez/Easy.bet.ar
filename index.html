@@ -86,26 +86,6 @@
                 alert('Por favor, completa todos los campos.');
                 return;
             }
-
-            // Enviar datos al servidor (opcional)
-            fetch('/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ nombre, email, telefono })
-            })
-            .then(response => {
-                if (response.ok) {
-                    mostrarConfirmacion(); // Muestra la página de confirmación
-                } else {
-                    throw new Error('Error al guardar los datos');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Hubo un error al guardar los datos.');
-            });
-        });
-
         // Funciones para mostrar y ocultar secciones
         function mostrarPagina2() {
             document.getElementById('page1').style.display = 'none';
