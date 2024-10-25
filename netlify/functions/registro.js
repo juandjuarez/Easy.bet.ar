@@ -8,7 +8,7 @@ exports.handler = async function(event, context) {
     return {
       statusCode: 200,
       headers: {
-        'Access-Control-Allow-Origin': * ,
+        'Access-Control-Allow-Origin': '*', // Corrección aquí
         'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type',
         'Access-Control-Max-Age': '86400',  // Cachea la solicitud preflight por un día
@@ -24,17 +24,27 @@ exports.handler = async function(event, context) {
     };
   }
 
-  // Procesar los datos enviados desde el formulario
-  const datosFormulario = JSON.parse(event.body);
+  try {
+    // Procesar los datos enviados desde el formulario
+    const datosFormulario = JSON.parse(event.body);
+    
+    console.log("Datos recibidos: ", datosFormulario); // Agrega un log para ver los datos
 
-  return {
-    statusCode: 200,
-    headers: {
-      'Access-Control-Allow-Origin': '*', // Permite solicitudes desde cualquier origen
-    },
-    body: JSON.stringify({
-      message: 'Registro exitoso',
-      data: datosFormulario,
-    }),
-  };
+    return {
+      statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*', // Permite solicitudes desde cualquier origen
+      },
+      body: JSON.stringify({
+        message: 'Registro exitoso',
+        data: datosFormulario,
+      }),
+    };
+  } catch (error) {
+    console.error("Error al procesar la solicitud:", error); // Log para errores
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ message: 'Error interno del servidor' }),
+    };
+  }
 };
