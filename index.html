@@ -6,22 +6,17 @@
     <title>EasyBet</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- Agregar el favicon en formato PNG -->
-    <link rel="icon" href="img/fav.png" type="image/png"> <!-- Asegúrate de que el archivo esté en formato .png -->
-    
+    <link rel="icon" href="img/fav.png" type="image/png">
     <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
         <section id="page1" class="hero">
             <img src="img/Easybet.png" alt="Logo EasyBet" class="logo-easybet">
-
             <div class="button-container">
                 <a href="javascript:void(0);" onclick="mostrarPagina2()" class="button-mayor">SOY MAYOR DE 18 AÑOS</a>
                 <a href="https://www.argentina.gob.ar/pautas-para-evitar-que-los-adolescentes-apuesten-online" target="_blank" class="button-menor">SOY MENOR DE 18 AÑOS</a>
             </div>
-
             <p class="subscription-text">¡SUSCRIBITE AHORA Y GANA</p>
             <p class="subscription-text">CON LOS BONOS DE BIENVENIDA</p>
             <p class="subscription-text">MÁS GRANDES DE ARGENTINA!</p>
@@ -34,21 +29,17 @@
             <p class="subscription-text">¡SUSCRIBITE AHORA Y GANA</p>
             <p class="subscription-text">CON LOS BONOS DE BIENVENIDA</p>
             <p class="subscription-text">MÁS GRANDES DE ARGENTINA!</p>
-
             <div class="background-image" style="background-image: url('img/2.png');"></div>
 
-            <!-- Formulario de suscripción -->
-         <form id="myForm" class="form-container" method="POST" action="/.netlify/functions/registro" data-netlify="true">
-            <input type="hidden" name="form-name" value="myForm">
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-            <input type="email" id="email" name="email" placeholder="E-mail" required>
-            <input type="tel" id="telefono" name="telefono" placeholder="Contacto +54" required>
-            <input type="hidden" name="redirect" value="/gracias">
-            <button type="submit" class="button-mayor">Suscribirme</button>
-         </form>
+            <form id="myForm" class="form-container" method="POST" action="/.netlify/functions/registro" data-netlify="true">
+                <input type="hidden" name="form-name" value="myForm">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+                <input type="tel" id="telefono" name="telefono" placeholder="Contacto +54" required>
+                <input type="hidden" name="redirect" value="/gracias">
+                <button type="submit" class="button-mayor">Suscribirme</button>
+            </form>
 
-
-            <!-- Contenedor de imágenes -->
             <div class='image-container'>
                 <a href='https://www.loteria.gba.gov.ar/' target='_blank'>
                     <img src='img/Loteria.png' alt='Logo Lotería' class='loteria-image'>
@@ -57,10 +48,7 @@
                     <img src='img/Ludopatia.jpg' alt='Logo Ludopatía' class='small-image'>
                 </a>
             </div>
-
-            <!-- Nueva imagen añadida -->
-            <img src='img/Recurso2.png' alt='Recurso Adicional' class='recurso-image'> <!-- Imagen adicional -->
-
+            <img src='img/Recurso2.png' alt='Recurso Adicional' class='recurso-image'>
         </section>
 
         <section id='confirmacion' class='content' style='display: none;'>
@@ -73,10 +61,8 @@
         </section>
     </main>
 
-    <!-- Script para manejar el envío del formulario -->
     <script>
         document.getElementById('myForm').addEventListener('submit', function(event) {
-            // Evita el envío tradicional
             event.preventDefault(); 
 
             const nombre = document.getElementById('nombre').value.trim();
@@ -88,7 +74,7 @@
                 return;
             }
 
-            fetch('/.netlify/functions/submitForm', {
+            fetch('/.netlify/functions/registro', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ nombre, email, telefono })
@@ -106,7 +92,6 @@
             });
         });
 
-        // Funciones para mostrar y ocultar secciones
         function mostrarPagina2() {
             document.getElementById('page1').style.display = 'none';
             document.getElementById('page2').style.display = 'block';
@@ -122,7 +107,5 @@
             document.getElementById('page1').style.display = 'block';
         }
     </script>
-    
-
 </body>
 </html>
