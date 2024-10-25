@@ -170,8 +170,7 @@ form button:hover { background-color:#4a1f6b ; }
   padding-left: 20px; /* Espaciado a la izquierda */
 }
 
-.success-message h1,
-.success-message p .confirmacion-exitosa {
+.success-message p {
   margin: 10px 0; /* Margen reducido para mejor alineación */
   text-align: center; /* Centrar el texto */
   color: #333; /* Color del texto */
@@ -179,7 +178,7 @@ form button:hover { background-color:#4a1f6b ; }
 }
 
 
-.success-message p, .success-message button { 
+.success-message button { 
   margin: 20px 0; /* Margen entre botones */
   padding: 10px 20px; /* Espaciado interno */
   background-color: #5E2D8A; /* Color de fondo del botón */
@@ -191,7 +190,9 @@ form button:hover { background-color:#4a1f6b ; }
   font-size: 1rem; /* Tamaño de la fuente */
   transition: background-color 0.3s ease; /* Transición suave */ 
 }
-
+.success-message button:hover {
+  background-color: #4a1f6b; /* Color de fondo al pasar por encima */
+}
 /* Media Queries para dispositivos móviles */
 @media (max-width :400px) {
    .form-container { width :95vw ; left :2.5%; }
