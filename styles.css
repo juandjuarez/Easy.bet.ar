@@ -167,13 +167,14 @@ form button:hover { background-color:#4a1f6b ; }
   justify-content: center; /* Centra verticalmente */
   align-items: flex-start; /* Alinea a la izquierda */
   height: 100vh; /* Altura total de la ventana */
-  padding-left: 20px; /* Espaciado a la izquierda */
+  padding-left: 50px; /* Espaciado a la izquierda */
 }
 
 .success-message p {
-  margin: 10px 0; /* Margen reducido para mejor alineación */
+  margin: 5px 0; /* Margen reducido para mejor alineación */
   text-align: center; /* Centrar el texto */
-  color: #333; /* Color del texto */
+  color: #FF99CC; /* Color del texto */
+  text-shadow: 1px 1px 2px white;
   font-family: 'Poppins', Arial, sans-serif; /* Tipografía uniforme */
 }
 
