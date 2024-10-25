@@ -1,0 +1,8 @@
+[build]
+  functions = "functions"  # Asegúrate de que este sea el nombre correcto de la carpeta
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/registro"
+  status = 200
+  force = true
