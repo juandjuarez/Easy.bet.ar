@@ -171,12 +171,26 @@ form button:hover { background-color:#4a1f6b ; }
 }
 
 .success-message h1,
-.success-message p {
-  margin: 30px; /* Elimina margenes para un mejor alineado */
+.success-message p .confirmacion-exitosa {
+  margin: 10px 0; /* Margen reducido para mejor alineación */
+  text-align: center; /* Centrar el texto */
+  color: #333; /* Color del texto */
+  font-family: 'Poppins', Arial, sans-serif; /* Tipografía uniforme */
 }
 
 
-.success-message p, .success-message button { margin :10px 0 ; }
+.success-message p, .success-message button { 
+  margin: 20px 0; /* Margen entre botones */
+  padding: 10px 20px; /* Espaciado interno */
+  background-color: #5E2D8A; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  border-radius: 60px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar el cursor al pasar por encima */
+  font-weight: 700; /* Peso de la fuente */
+  font-size: 1rem; /* Tamaño de la fuente */
+  transition: background-color 0.3s ease; /* Transición suave */ 
+}
 
 /* Media Queries para dispositivos móviles */
 @media (max-width :400px) {
