@@ -137,7 +137,7 @@ form button:hover { background-color:#4a1f6b ; }
 
 .subscription-text {
    position :relative ;
-   color :lightpink ;
+   color : #FF99CC ;
    font-size :24px ;
    font-weight :bold ;
    font-family :'Poppins', sans-serif ;
@@ -149,14 +149,19 @@ form button:hover { background-color:#4a1f6b ; }
    margin-top :0.2px ;
 }
 
-.success-message {
-   display:flex ; 
-   flex-direction :column ;
-   position:absolute ;
-   top :50% ;
-   left :5% ;
-   transform :translateY(-50%) ;
+/* Estilos para el mensaje de confirmación de registro exitoso */
+.success-message .confirmacion-exitosa {
+  color:#663399;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 8px;
+  background-color: transparent;
+  text-shadow: 1px 1px 2px white;
 }
+
 
 .success-message p, .success-message button { margin :10px 0 ; }
 
