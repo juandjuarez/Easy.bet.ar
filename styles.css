@@ -156,7 +156,6 @@ form button:hover { background-color:#4a1f6b ; }
   font-size: 1.5em;
   text-align: center;
   padding: 10px;
-  border: 2px solid white;
   border-radius: 8px;
   background-color: transparent;
   text-shadow: 1px 1px 2px white;
@@ -173,7 +172,7 @@ form button:hover { background-color:#4a1f6b ; }
 
 .success-message h1,
 .success-message p {
-  margin: 0; /* Elimina margenes para un mejor alineado */
+  margin: 30px; /* Elimina margenes para un mejor alineado */
 }
 
 
