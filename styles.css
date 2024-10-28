@@ -168,6 +168,7 @@ form button:hover { background-color:#4a1f6b ; }
   align-items: flex-start; /* Alinea a la izquierda */
   height: 100vh; /* Altura total de la ventana */
   padding-left: 70px; /* Espaciado a la izquierda */
+  padding-top: 20px;
 }
 
 .success-message p {
@@ -180,7 +181,7 @@ form button:hover { background-color:#4a1f6b ; }
 
 
 .success-message button { 
-  margin: 20px 0 20px 40px; /* Margen entre botones */
+  margin: 10px 0 20px 40px; /* Margen entre botones */
   padding: 10px 20px; /* Espaciado interno */
   background-color: #5E2D8A; /* Color de fondo del botón */
   color: #fff; /* Color del texto del botón */
