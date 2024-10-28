@@ -30,7 +30,7 @@ body {
 }
 
 .button-mayor, .button-menor {
-  padding: 0.6rem 1.2rem; /* Cambiado a rem para mejor control */
+  padding: 1rem; /* Aumenta el padding para mejor usabilidad */
   font-size: 1rem; /* Ajustar el tamaño de fuente */
   font-weight: 700;
   color: #fff;
@@ -39,6 +39,7 @@ body {
   border: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
   max-width: 250px; /* Limitar el ancho máximo */
+  margin: 0 10px; /* Espaciado entre botones */
 }
 
 .button-mayor { background-color: #F39; }
@@ -61,7 +62,7 @@ body {
 }
 
 .form-container {
-  display: flexbox; 
+  display: flex; 
   flex-direction: column;  
   position: fixed; 
   top: 60%; 
@@ -71,42 +72,42 @@ body {
 }
 
 form {
- display:flex; /* Usar flexbox en el formulario */
- flex-direction :column; /* Alinear elementos verticalmente dentro del formulario */
- align-items :flex-start; /* Alinear elementos a la izquierda */
+  display: flex; /* Usar flexbox en el formulario */
+  flex-direction: column; /* Alinear elementos verticalmente dentro del formulario */
+  align-items: flex-start; /* Alinear elementos a la izquierda */
 }
 
 form input {
- margin :1vh 0 ;  
- padding :1rem ; 
- width :75% ;  
- max-width :400px ;  
- border-radius :10px ; 
- border :3px solid #ffc0cb ; 
- background-color :#fff ; 
+  margin: 1vh 0;  
+  padding: 1rem; 
+  width: 75%;  
+  max-width: 400px;  
+  border-radius: 10px; 
+  border: 3px solid #ffc0cb; 
+  background-color: #fff; 
 }
 
-form input::placeholder { color :#ccc ; }
+form input::placeholder { color: #ccc; }
 
 form button {
- padding :1rem 2rem ; 
- background-color :#5E2D8A ; 
- color :#fff ; 
- border-radius :60px ; 
- cursor:pointer ; 
- font-weight :700 ; 
- font-size :1rem ; 
- transition :background-color 0.3s ease ; 
- margin-top: 10px; /* Espacio entre botones en el formulario */
+  padding: 1rem 2rem; 
+  background-color: #5E2D8A; 
+  color: #fff; 
+  border-radius: 60px; 
+  cursor: pointer; 
+  font-weight: 700; 
+  font-size: 1rem; 
+  transition: background-color 0.3s ease; 
+  margin-top: 10px; /* Espacio entre botones en el formulario */
 }
 
-form button:hover { background-color:#4a1f6b ; }
+form button:hover { background-color: #4a1f6b; }
 
 .image-container {
- position:absolute ;
- bottom :20px ; 
- right :20px ; 
- display:flex ;
+  position: absolute; 
+  bottom: 20px; 
+  right: 20px; 
+  display: flex; 
 }
 
 .loteria-image {
@@ -117,16 +118,17 @@ form button:hover { background-color:#4a1f6b ; }
 }
 
 .small-image {
-   width :100px ;
-   margin-left: 10px; /* Espacio a la izquierda para separación */
+  width: 100px; 
+  margin-left: 10px; /* Espacio a la izquierda para separación */
 }
 
 .logo-easybet {
-   position :relative ;
-   top :20px ; /* Ajusta según sea necesario */
-   left :80px; /* Ajuste para alinearlo a la izquierda */
-   width :300px ; /* Mantén el mismo tamaño */
+  position: relative; 
+  top: 20px; /* Ajusta según sea necesario */
+  left: 80px; /* Ajuste para alinearlo a la izquierda */
+  width: 300px; /* Mantén el mismo tamaño */
 }
+
 .recurso-image {
   position: absolute; /* Mantener la imagen fija */
   bottom: 10px; /* Ajusta este valor para moverla hacia arriba o abajo */
@@ -136,93 +138,107 @@ form button:hover { background-color:#4a1f6b ; }
 }
 
 .subscription-text {
-   position :relative ;
-   color : #FF99CC ;
-   font-size :24px ;
-   font-weight :bold ;
-   font-family :'Poppins', sans-serif ;
-   margin-left :80px; 
-   text-align:left; 
+  position: relative; 
+  color: #FF99CC; 
+  font-size: 24px; 
+  font-weight: bold; 
+  margin-left: 80px; 
+  text-align: left; 
 }
 
 .subscription-text + .subscription-text { 
-   margin-top :0.2px ;
+  margin-top: 0.2px;
 }
 
 /* Estilos para el mensaje de confirmación de registro exitoso */
+.success-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  height: 100vh; /* Altura total de la ventana */
+  padding: 20px; /* Espacio alrededor */
+  text-align: center; /* Centra el texto */
+}
+
 .success-message .confirmacion-exitosa {
-  color:#663399;
+  color: #663399;
   font-weight: bold;
   font-size: 1.5em;
-  text-align: center;
   padding: 10px;
   border-radius: 8px;
   background-color: transparent;
   text-shadow: 1px 1px 2px white;
 }
 
-.success-message {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centra verticalmente */
-  align-items: flex-start; /* Alinea a la izquierda */
-  height: 100vh; /* Altura total de la ventana */
-  padding-left: 70px; /* Espaciado a la izquierda */
-  padding-top: 20px;
-}
-
 .success-message p {
-  margin: 5px 0; /* Margen reducido para mejor alineación */
-  text-align: center; /* Centrar el texto */
+  margin: 10px 0; /* Margen ajustado */
   color: #FF99CC; /* Color del texto */
   text-shadow: 1px 1px 2px white;
   font-family: 'Poppins', Arial, sans-serif; /* Tipografía uniforme */
+  font-size: 1.5rem; /* Tamaño de fuente más grande */
 }
 
-
 .success-message button { 
-  margin: 10px 0 20px 40px; /* Margen entre botones */
-  padding: 10px 20px; /* Espaciado interno */
+  margin: 10px 0; /* Margen entre botones */
+  padding: 15px 25px; /* Espaciado interno */
   background-color: #5E2D8A; /* Color de fondo del botón */
   color: #fff; /* Color del texto del botón */
   border: none; /* Sin borde */
   border-radius: 60px; /* Bordes redondeados */
   cursor: pointer; /* Cambiar el cursor al pasar por encima */
   font-weight: 700; /* Peso de la fuente */
-  font-size: 1rem; /* Tamaño de la fuente */
+  font-size: 1.2rem; /* Tamaño de la fuente */
   transition: background-color 0.3s ease; /* Transición suave */ 
 }
+
 .success-message button:hover {
   background-color: #4a1f6b; /* Color de fondo al pasar por encima */
 }
+
 /* Media Queries para dispositivos móviles */
-@media (max-width :400px) {
-   .form-container { width :95vw ; left :2.5%; }
- 
-   form input, form button {
-       width :85vw ;
-       font-size :4vw ;
-       padding :1rem ;
-       margin-top: 5px; /* Espacio entre botones en móvil también */
-       margin-bottom: 5px; /* Espacio entre botones en móvil también */
-   }
+@media (max-width: 768px) {
+  .success-message {
+    padding: 10px; /* Reduce el padding en pantallas pequeñas */
+  }
 
-   .button-mayor, .button-menor {
-       padding :1vw 2vw ;
-       font-size :2.5vw ;
-       margin-bottom: 5px; /* Espacio reducido entre botones en móvil */ 
-   }
+  .success-message p {
+    font-size: 1.2rem; /* Ajusta el tamaño del texto */
+  }
 
-   .button-container { top :40%; left :5%; }
+  .success-message button {
+    width: 90%; /* Botón ocupa casi todo el ancho */
+    padding: 12px; /* Ajusta el padding del botón */
+  }
 
-    .small-image { width: 30px; }
-  
-    .logo-easybet { width: 150px; }
-  
-    .subscription-text { 
-        font-size: 5vw;
-        margin-left: 0; 
-        text-align: center; 
-    }
-    
+  .button-container {
+    flex-direction: column; /* Apilar botones verticalmente en móviles */
+    align-items: center; /* Centra los botones */
+  }
+}
+
+@media (max-width: 400px) {
+  .success-message p {
+    font-size: 1rem; /* Tamaño de fuente aún más pequeño */
+  }
+
+  .success-message button {
+    font-size: 1rem; /* Tamaño de fuente ajustado */
+    padding: 10px; /* Reduce el padding en móviles */
+  }
+
+  .button-mayor, .button-menor {
+    width: 100%; /* Botones ocupan todo el ancho */
+    margin: 5px 0; /* Espaciado entre botones apilados */
+  }
+
+  .logo-easybet {
+    width: 150px; /* Ajustar el tamaño en móviles */
+  }
+
+  .subscription-text { 
+    font-size: 5vw; /* Ajusta el tamaño en móviles */
+    margin-left: 0; 
+    text-align: center; 
+  }
 }
