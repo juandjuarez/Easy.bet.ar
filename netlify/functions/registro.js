@@ -12,7 +12,8 @@ exports.handler = async function(event, context) {
         const datosFormulario = JSON.parse(event.body);
         console.log("Datos recibidos: ", datosFormulario); // Log de los datos recibidos
 
-        // Aquí puedes agregar la lógica para guardar los datos en la base de datos
+        // Si estás utilizando Netlify Forms, no es necesario guardar en una base de datos adicional
+        // Simplemente puedes enviar una respuesta de éxito
 
         return {
             statusCode: 200,
