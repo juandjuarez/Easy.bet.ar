@@ -133,7 +133,7 @@ form button:hover { background-color: #4a1f6b; }
   position: absolute; /* Mantener la imagen fija */
   bottom: 10px; /* Ajusta este valor para moverla hacia arriba o abajo */
   left: 40px; /* Cambia este valor para moverla hacia la derecha o izquierda */
-  width: 450px; /* Cambia este valor para ajustar el tamaño de la imagen */
+  width: 200px; /* Cambia este valor para ajustar el tamaño de la imagen */
   height: auto; /* Mantiene las proporciones de la imagen */
 }
 
