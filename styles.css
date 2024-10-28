@@ -167,7 +167,7 @@ form button:hover { background-color:#4a1f6b ; }
   justify-content: center; /* Centra verticalmente */
   align-items: flex-start; /* Alinea a la izquierda */
   height: 100vh; /* Altura total de la ventana */
-  padding-left: 50px; /* Espaciado a la izquierda */
+  padding-left: 70px; /* Espaciado a la izquierda */
 }
 
 .success-message p {
