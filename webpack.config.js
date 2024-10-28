@@ -10,6 +10,7 @@ module.exports = {
   resolve: {
     fallback: {
       path: false,  // Desactiva la necesidad del módulo path
+      assert: require.resolve('assert/'),
       zlib: require.resolve('browserify-zlib'),
       crypto: require.resolve('crypto-browserify'),
       querystring: require.resolve('querystring-es3'),
