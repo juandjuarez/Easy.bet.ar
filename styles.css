@@ -220,11 +220,12 @@ form button:hover { background-color: #4a1f6b; }
   }
 
   .form-container {
-    left: 50%; /* Mueve el contenedor hacia el centro */
-    transform: translateX(-50%); /* Asegura centrado horizontal */
-    width: 90%; /* Aumenta el ancho para móviles */
-    padding: 20px; /* Espacio alrededor */
-  }
+      position: relative;
+      top: 50%; 
+      left: 50%;
+      transform: translate(-50%, -50%); /* Centrar en el medio de la pantalla */
+      width: 80%; /* Ancho adaptado a móviles */
+    }
 
   .image-container {
     flex-direction: column; /* Apilar imágenes verticalmente */
