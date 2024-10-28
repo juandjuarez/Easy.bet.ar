@@ -218,7 +218,13 @@ form button:hover { background-color: #4a1f6b; }
 
   .form-container {
     left: 50%; /* Mueve el contenedor hacia el centro */
-    transform: translateX(-30%); /* Ajusta para centrarlo */
+    transform: translate(-50%, -50%); /* Ajusta para centrarlo */
+    width: 90%; /* Aumenta el ancho para móviles */
+  }
+
+  .image-container {
+    flex-direction: column; /* Apilar imágenes verticalmente */
+    align-items: center; /* Centra las imágenes */
   }
 }
 
