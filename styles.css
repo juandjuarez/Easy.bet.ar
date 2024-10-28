@@ -215,6 +215,11 @@ form button:hover { background-color: #4a1f6b; }
     flex-direction: column; /* Apilar botones verticalmente en móviles */
     align-items: center; /* Centra los botones */
   }
+
+  .form-container {
+    left: 50%; /* Mueve el contenedor hacia el centro */
+    transform: translateX(-30%); /* Ajusta para centrarlo */
+  }
 }
 
 @media (max-width: 400px) {
