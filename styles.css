@@ -201,6 +201,9 @@ form button:hover { background-color: #4a1f6b; }
   .success-message {
     padding: 10px; /* Reduce el padding en pantallas pequeñas */
   }
+  .recurso-image {
+    display: none; /* Oculta la imagen en pantallas pequeñas */
+  }
 
   .success-message p {
     font-size: 1.2rem; /* Ajusta el tamaño del texto */
