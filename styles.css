@@ -218,8 +218,9 @@ form button:hover { background-color: #4a1f6b; }
 
   .form-container {
     left: 50%; /* Mueve el contenedor hacia el centro */
-    transform: translate(-50%, -50%); /* Ajusta para centrarlo */
+    transform: translateX(-50%); /* Asegura centrado horizontal */
     width: 90%; /* Aumenta el ancho para móviles */
+    padding: 20px; /* Espacio alrededor */
   }
 
   .image-container {
@@ -248,8 +249,8 @@ form button:hover { background-color: #4a1f6b; }
   }
 
   .subscription-text { 
-    font-size: 5vw; /* Ajusta el tamaño en móviles */
-    margin-left: 0; 
+    font-size: 6vw; /* Ajusta el tamaño en móviles */
+    margin-left: 2; 
     text-align: center; 
   }
 }
